@@ -23,10 +23,10 @@ message_label.pack(expand=True)
 def check_button_state(button_pin):
     if GPIO.input(button_pin) == GPIO.LOW:
         if button_pin == 6:
-            message_label.config(text="ありがとう")
+            message_label.config(text="表示メッセージ1")
             root.after(message_duration, clear_message)
         elif button_pin == 5:
-            message_label.config(text="先どうぞ")
+            message_label.config(text="表示メッセージ2")
             root.after(message_duration, clear_message)
 
 def clear_message():
